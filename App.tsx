@@ -1,24 +1,14 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import {SafeAreaView, Text, StyleSheet} from 'react-native';
+import { LogBox } from 'react-native';
+import AppNavigator from './src/navigation/AppNavigator';
 
-function App(): React.JSX.Element {
+LogBox.ignoreAllLogs();
+
+const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.text}>Welcome to Agrimart</Text>
-    </SafeAreaView>
+      <AppNavigator />   
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
-});
+};
 
 export default App;
